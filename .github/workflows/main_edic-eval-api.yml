@@ -49,5 +49,5 @@ jobs:
         with:
           app-name: 'EDIC-Eval-API'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_CC0F343B020E44D3B20986D253CA0BBF }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_AD02D624041B47C39680C04FFBC00374 }}
           package: '*.jar'
