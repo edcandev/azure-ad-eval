@@ -1,0 +1,17 @@
+{
+    "rangos" : [
+        {
+            "seccion":1,
+            "rango": 2
+        },
+        {
+            "seccion":1,
+            "rango": 2
+        },
+        {
+            "seccion":1,
+            "rango": 2
+        }
+    ],
+    "total": 7.55
+}

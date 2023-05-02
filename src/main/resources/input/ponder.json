@@ -1,0 +1,46 @@
+{
+    "ponder": [
+         {
+              "seccion": 1,
+              "numPreguntas": 36,
+              "maxPosible": 144,
+              "rangos": [103,104,132]
+         },
+         {
+              "seccion": 2,
+              "numPreguntas": 21,
+              "maxPosible": 84,
+              "rangos": [59,60,77]
+         },
+         {
+              "seccion": 3,
+              "numPreguntas": 27,
+              "maxPosible": 108,
+              "rangos": [76,77,90]
+         },
+         {
+              "seccion": 4,
+              "numPreguntas": 31,
+              "maxPosible": 134,
+              "rangos": [87,88,113]
+         },
+         {
+              "seccion": 5,
+              "numPreguntas": 17,
+              "maxPosible": 68,
+              "rangos": [47,48,62]
+         },
+         {
+              "seccion": 6,
+              "numPreguntas": 12,
+              "maxPosible": 11,
+              "rangos": [6,7,10]
+         },
+         {
+              "seccion": 7,
+              "numPreguntas": 12,
+              "maxPosible": 12,
+              "rangos": [6,7,10]
+         }
+    ]
+}
