@@ -18,8 +18,15 @@ public class JsonParserService {
     JSONObject inputJsonObject;
 
     public List<Ponder> toPondersList(String jsonFile) {
-        //Path filePath = Path.of(System.getProperty("user.dir"),"src","main","resources","input",jsonFile);
-        Path filePath = Path.of("/results",jsonFile);
+
+        Path filePath;
+
+        if(System.getProperty("os.name").contains("Windows")) {
+            filePath = Path.of(System.getProperty("user.dir"),"src","main","resources","input",jsonFile);
+        } else {
+            filePath = Path.of("/results",jsonFile);
+        }
+
         System.out.println(filePath);
 
         try {

@@ -35,6 +35,11 @@ public class AppController {
     @PostMapping(value = "/post/answers", consumes = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<String> postAnswers(@RequestBody String body) throws IOException {
 
+        JSONObject bodyJson = new JSONObject(body);
+
+        System.out.println(bodyJson);
+
+
         List<Answer> answersObjectList = jsonParserService.toAnswersList(body);
         String username = jsonParserService.getUsername(body);
         JSONObject jsonResult = evaluatorService.evaluate(answersObjectList, username) ;
@@ -42,7 +47,8 @@ public class AppController {
         String user = username.replaceAll("@edicmexico.onmicrosoft.com","");
 
 
-        fileWritingService.createAndWriteJson(username, jsonResult);
+        fileWritingService.createAndWriteJson(username, jsonResult,"-results");
+        fileWritingService.createAndWriteJson(username, bodyJson,"-answers");
 
 
 

@@ -12,31 +12,19 @@ import java.nio.file.Path;
 public class FileWritingServiceImpl implements FileWritingService {
 
     @Override
-    public boolean createAndWriteJson(String username, JSONObject resultJson) throws IOException {
+    public boolean createAndWriteJson(String username, JSONObject resultJson, String sufix) throws IOException {
 
         //Prefijo del usuario...
 
         String user = username.replaceAll("@edicmexico.onmicrosoft.com","");
 
-        // Crear directorio y JSON personalizado
-
-        //file.createNewFile();
-
-        /*File f = new File("/results/".concat(user)); // Crea el directorio sino existe
-
-        if (f.mkdir()) {
-            System.out.println("Directorio de " + user + " sido creado");
-        }
-        else {
-            System.out.println("El directorio ya existe");
-        }*/
         try {
 
             String fileSeparator = System.getProperty("file.separator");
 
             new File(fileSeparator+"results"+fileSeparator + user).mkdirs();
 
-            String absoluteFilePath = fileSeparator+"results"+fileSeparator + user + fileSeparator + user + "-res.json";
+            String absoluteFilePath = fileSeparator+"results"+fileSeparator + user + fileSeparator + user + sufix + ".json";
             //String absoluteFilePath = fileSeparator+ user + "-res.json";
 
             System.out.println(fileSeparator);
